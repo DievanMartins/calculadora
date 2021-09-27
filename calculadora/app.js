@@ -2,7 +2,11 @@
 //inserir os números e sinais no display
 function insert(num){
   let amount = document.querySelector('#result').innerHTML;
-  document.querySelector('#result').innerHTML = amount + num;
+  let allNumbers = document.querySelector('#result').innerHTML = amount + num;
+  if(allNumbers === '..'){
+    alert('ERRO')
+    clean();
+  }
 }
 
 //limpar display
